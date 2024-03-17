@@ -1,0 +1,25 @@
+{
+  "name": "discord_github_bots",
+  "version": "1.0.0",
+  "type": "module",
+  "description": "Deploys discord chat bots capable of managing GitHub issues on docker",
+  "main": "index.js",
+  "scripts": {
+    "test": "npm test",
+    "start": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/intelligent-iterations/discord_github_bots.git"
+  },
+  "author": "luciana-lara",
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/intelligent-iterations/discord_github_bots/issues"
+  },
+  "homepage": "https://github.com/intelligent-iterations/discord_github_bots#readme",
+  "dependencies": {
+    "discord_chatbots": "^1.0.1",
+    "dotenv": "^16.4.5"
+  }
+}
