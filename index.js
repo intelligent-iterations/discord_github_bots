@@ -5,7 +5,7 @@ import { Bot } from 'discord_chatbots';
 const discordBotConfig = [
     {
         name: 'One of your user facing bots',
-        token: process.env.DISCORD_PM_TOKEN,
+        token: process.env.DISCORD_BOT_TOKEN,
         agentId: 'your_agent_id', ///you'll have to get this from the llm lab (see: additional set-up),
         showOpenIssues: true ///he will see all the github issues which are open
     },
