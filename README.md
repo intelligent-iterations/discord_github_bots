@@ -19,10 +19,16 @@ To interact with GitHub issues directly from Discord, include specific keywords 
 - An account with [LLM Lab](https://intelligentiterations.com)
 - A Discord bot token
     - your bot added to a Discord server with the necessary permissions.
-- a GitHub personal access token.
+- A GitHub personal access token.
+- At least one Github Repository to create/update issues from
 
 
 ## Quick Start
+
+### Installation
+```
+git clone https://github.com/intelligent-iterations/discord_github_bots.git
+```
 
 ### Configuration
 __Set Up Environment Variables__
