@@ -19,6 +19,6 @@
   },
   "homepage": "https://github.com/intelligent-iterations/discord_github_bots#readme",
   "dependencies": {
-    "discord_chatbots": "^1.0.3"
+    "discord_chatbots": "^1.0.4"
   }
 }

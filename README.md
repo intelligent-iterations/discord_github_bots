@@ -30,25 +30,59 @@ To interact with GitHub issues directly from Discord, include specific keywords 
 git clone https://github.com/intelligent-iterations/discord_github_bots.git
 ```
 
-### Configuration
-__Set Up Environment Variables__
-1. Create a .env file in your project root.
-2. Add the following lines, replacing your_value_here with your actual credentials:
+## Configuration
+
+### Step 1: Create Configuration Files
+Create two JSON configuration files in your project root: 
+
+- **agent_config.json** 
+- **project_config.json**
+
+Create these files in your project's root directory. They will store configurations for your bot and project, respectively. These files are added to gitignore to prevent sensitive information from being uploaded to your repository..
+
+### Step 2: Configure Your Files
+
+#### Replace placeholders: 
+**token**: This is the Discord bot token, you can obtain it from the Discord Developer Portal
+
+- **agent_config.json**:
+ 
+
+  ```json
+  [
+      {
+          "name": "Your agent name",
+          "token": "discord-bot-token",
+          "agentId": "agent-id-from-console",
+          "showOpenIssues": true
+      }
+  ]
+  
+  
+
+#### Replace placeholders: 
+**githubOrg**: The bot is configured to fetch issues from your organization's name specified in project_config.json.
+
+**discordToGithubUsernames**: Map your team members' Discord usernames to their GitHub usernames for better collaboration.
+
+**formatIssueAgentId**: The bot displays only issues assigned to you. Ensure this ID is correctly set to allow the bot to format the issues properly.
+
+**agentId**: Obtain the Agent IDs from the AI response source at LLM Lab. These IDs are crucial for your bots to function properly.
+- **project_config.json**:
+
+
+```json
+{
+    "githubOrg": "your-org-name",
+    "discordToGithubUsernames": {
+        "Discord-username": "GitHub-username"
+    },
+    "formatIssueAgentId": "format-id-from-console",
+    "maxMessageCacheLength": 10,
+    "iiKEY": "LLM-Lab-api-key",
+    "GITHUB_TOKEN": "ghp-your-github-token"
+}
 ```
-II_KEY= <your_ii_key> //you can get this in user settings
-GITHUB_TOKEN= <your_github_token>
-DISCORD_BOT_TOKEN= <your_discord_bot_token>
-```
-__index.js__
-
-This is where the bots are being initialized. Ensure to replace the placeholders with your actual data.
-- **agentID**: Obtain the Agent IDs from the AI response source at [LLM Lab](https://intelligentiterations.com). These IDs are crucial for your bots to function properly.
-
-- **updateIssuesBotId**: Similar to `agentID`, but this agent focuses on formatting issues rather than user interaction. More details can be found in the AI Setup section below.
-
-- **githubOrg**: The bot is configured to fetch issues from your organization's name specified in `projectConfig`. Ensure this is correctly set to allow the bot to access the relevant issues.
-
-- **discordToGithubUsernames**: The bot displays only issues assigned to you. Ensure you map your team members' usernames to their Discord usernames for them to see their assigned issues, facilitating better collaboration.
 
 
 ## AI Setup
