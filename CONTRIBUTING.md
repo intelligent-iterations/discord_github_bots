@@ -14,8 +14,7 @@ Thank you for your interest in contributing to our project! Your contributions a
 
 To contribute, you first need to create a fork of the repository. This means you’ll have your own copy of the repository under your GitHub account. To do this:
 
-1. Navigate to the GitHub page of the project you wish to contribute to.
-2. At the top-right corner of the page, click the “Fork” button.
+At the top-right corner of our github page, click the “Fork” button.
 
 ### Cloning Your Fork
 
